@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>浮月山房 — 一座浮在云雾里的山房</title>
+  <meta name="description" content="浮月山房 · 夜游。九尾锦鲤守着一池月色，四百年石灯笼火没有熄过。点一盏河灯，把心愿放进水里。">
+  <meta name="theme-color" content="#0b0e13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b6402f'/%3E%3Ccircle cx='16' cy='14' r='7' fill='%23f2ead8'/%3E%3Cpath d='M8 24c3-2.5 13-2.5 16 0' stroke='%23f2ead8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="../../assets/fuyue-Df84IClA.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/fuyue-Htxxbzmy.css">
+</head>
+<body>
+  <canvas id="gl"></canvas>
+
+  <!-- preloader -->
+  <div id="loader">
+    <div class="ld-mark"><span class="ld-seal">浮</span><span class="ld-name">浮月山房</span></div>
+    <div class="ld-sub">山 中 有 月 · 正 在 点 灯</div>
+    <div class="ld-bar"><i id="ld-fill"></i></div>
+    <div class="ld-num" id="ld-num">00</div>
+  </div>
+
+  <!-- chrome -->
+  <header class="nav">
+    <a class="brand" href="#"><span class="seal">浮</span><b>浮月山房</b><i>FÚYUÈ SHĀNFÁNG</i></a>
+    <nav class="links">
+      <a href="#s-garden" data-goto="1">入园</a>
+      <a href="#s-lantern" data-goto="2">灯笼</a>
+      <a href="#s-teas" data-goto="4">茶单</a>
+      <a class="pill" href="#s-book" data-goto="5">预约一席</a>
+    </nav>
+  </header>
+  <div class="edge-note caps">SCROLL — 入夜 · 从一次呼吸开始</div>
+
+  <!-- panels -->
+  <section class="panel hero" id="p0">
+    <div class="hero-title">
+      <h1><span class="ln"><span>浮月</span></span><span class="ln"><span>山房</span></span></h1>
+      <span class="h-seal" aria-hidden="true">夜游</span>
+    </div>
+    <p class="hero-sub">一座浮在云雾里的山房。夜里亮灯，<br>九尾锦鲤替你守着这一池月色。</p>
+    <div class="hero-cta">
+      <button class="btn solid" data-goto="1">开始夜游</button>
+      <button class="btn ghost" data-goto="5">预约一席</button>
+    </div>
+    <div class="hero-vert caps" aria-hidden="true">寅时 · 山中有月 · 夜游开始</div>
+  </section>
+
+  <section class="panel card left" id="p1">
+    <em class="eyebrow">壹 · 入园</em>
+    <h2>入夜</h2>
+    <p>把城市的灯留在山下。<br>从这道门槛起，只剩水声、松风，和一轮比城里近得多的月亮。</p>
+    <div class="kv"><span>月出</span><b>戌时三刻</b><span>云</span><b>薄</b><span>风</span><b>松间来</b></div>
+  </section>
+
+  <section class="panel card right" id="p2">
+    <em class="eyebrow">贰 · 池上</em>
+    <h2>锦鲤</h2>
+    <p>九尾锦鲤，红白是云，墨是山影。<br>它们绕着山房游了一整夜——不为食物，只为把月亮游圆。</p>
+    <div class="hint-line caps">移动指针 · 鱼会看你</div>
+  </section>
+
+  <section class="panel card left" id="p3">
+    <em class="eyebrow">叁 · 守夜</em>
+    <h2>石灯笼</h2>
+    <p>四百年前凿下的灯座。火换过千百次，<br>守灯的人换了一代又一代——亮着这件事，从没变过。</p>
+    <div class="kv"><span>凿于</span><b>明 · 万历</b><span>火</span><b>未熄</b></div>
+  </section>
+
+  <section class="panel card center top" id="p4">
+    <em class="eyebrow">肆 · 心愿</em>
+    <h2>放一盏河灯</h2>
+    <p>点一点水面。灯会亮起来，顺着水漂向月亮那边。<br>心愿不必说出来——水记得。</p>
+    <div class="wish-row"><b id="wish-n">0</b><span>盏灯已放进水里</span><i class="caps">CLICK THE POND</i></div>
+  </section>
+
+  <section class="panel teas" id="p5">
+    <div class="teas-head"><em class="eyebrow">伍 · 茶单</em><h2>四时四盏</h2></div>
+    <div class="tea-grid">
+      <article class="tea"><i>01</i><h3>云雾</h3><p>清明前的芽，云里长的。<br>喝一口，山就把你接住了。</p><b>春 · 绿</b></article>
+      <article class="tea"><i>02</i><h3>桂魄</h3><p>窨了三遍桂花。<br>月光落进杯子里就是这个味。</p><b>秋 · 香</b></article>
+      <article class="tea"><i>03</i><h3>松风</h3><p>老丛焙足八小时。<br>苦后回甘，像守夜到天亮。</p><b>冬 · 岩</b></article>
+      <article class="tea"><i>04</i><h3>月白</h3><p>四时都有的白茶。<br>什么都不加，什么都不缺。</p><b>四时 · 淡</b></article>
+    </div>
+  </section>
+
+  <section class="panel book" id="p6">
+    <div class="book-card">
+      <em class="eyebrow">陆 · 预约</em>
+      <h2>夜游 · 一席难求</h2>
+      <p>每晚只开六席。灯亮之后，山门就关了。</p>
+      <div class="slots"><span>今晚 · 寅时</span><b>余二席</b></div>
+      <button class="btn solid big">预约一席</button>
+      <small class="caps">SIX SEATS A NIGHT — MOON GUARANTEED, WEATHER NOT</small>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span class="seal sm">浮</span>
+    <div><b>浮月山房</b><i>FÚYUÈ SHĀNFÁNG · NIGHT GARDEN</i></div>
+    <span class="foot-line">山中不知岁 · 丙午年制</span>
+  </footer>
+
+  <div class="toast caps" id="toast" role="status"></div>
+  <div class="click-veil" id="veil" aria-hidden="true"></div>
+
+</body>
+</html>
